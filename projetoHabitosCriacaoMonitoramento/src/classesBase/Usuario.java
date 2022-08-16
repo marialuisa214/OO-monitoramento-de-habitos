@@ -13,7 +13,7 @@ public class Usuario {
 			this.senha = senha;
 		}
 		
-	//METODOS
+//	METODOS
 		public String getNome() {
 			return nome;}
 		public void setNome(String nome) {
@@ -30,5 +30,12 @@ public class Usuario {
 			return senha;}
 		public void setSenha(String senha) {
 			this.senha = senha;
+		}
+	//validação de senha
+		public boolean autentica(String  senha) {
+			if(this.senha == senha) {
+				return true;
+			}else {
+				return false;}
 		}
 }

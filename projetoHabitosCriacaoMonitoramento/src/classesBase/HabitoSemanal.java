@@ -1,12 +1,14 @@
 package classesBase;
 
-public class HabitoSemanal {
-	//ATRIBUTOS
-		//TODOS QUE PERTECEM A CLASSE 'Habitos' +
-		private DiasSemana diasSelecionados;
-		
-	//METODOS
-		//TODOS QUE PERTECEM A CLASSE 'Habitos' +
-		//PESQUISAR COMO SELECIONAR MAIS DE UM UNUM
-		
+public class HabitoSemanal extends Habito {
+//ATRIBUTOS
+	private DiasSemana diaSelecionado;
+	
+// o que é necessário para a construção do hábito?(nome, dias da semana o resto é pré preparado)
+	
+//METODOS
+	public DiasSemana getDia(){
+		return diaSelecionado;}
+	public void setDiasSemana(DiasSemana dia) {
+		this.diaSelecionado = dia;}
 }

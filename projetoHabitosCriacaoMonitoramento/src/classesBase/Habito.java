@@ -1,13 +1,13 @@
 package classesBase;
 
-public class Habito {
+public abstract class Habito {
 	//ATRIBUTOS
 		protected String nome;
-		protected int repeticaoDia;
-		protected String turno; //usar enum posteriomente
+		protected int repeticaoDia = 1;
+		protected Turno turno = Turno.QUALQUER; 
 		protected int feito;
 		protected boolean status;
-		private Lembrete lembrete;
+		protected Lembrete lembrete;
 
 	//METODOS
 		public String getNome() {
@@ -17,18 +17,27 @@ public class Habito {
 		
 		public int getRepeticaoDia() {
 			return repeticaoDia;}
-		public void setrepeticaoDia(int repeticoes) {
+		public void setRepeticaoDia(int repeticoes) {
 			this.repeticaoDia = repeticoes;}
-		
-		public String getTurno() {
-			return turno;}
-		public void setTurno(String turno) {
-			this.turno = turno;}
 		
 		public int getFeito() {
 			return feito;}
 		public void setFeito(int feito) {
-			this.feito = feito;}
+			this.feito = feito;
+			if(feito==repeticaoDia) {
+				System.out.println("tarefa completa!");
+				this.status = true;
+			} if(feito > repeticaoDia) {
+				System.out.println("erro"); //não deve ser possivel realizar mais vezes que o indicado ao criar o hábito
+			} else {
+				System.out.println("para finalizar esse hábito faltam " + (repeticaoDia - feito) + " vezes");
+			}
+				}
+		
+		public Turno getTurno(){
+			return turno;}
+		public void setDefinindoTurno(Turno turno) {
+			this.turno = turno;}
 		
 		public boolean getStatus() {
 			return status;}
