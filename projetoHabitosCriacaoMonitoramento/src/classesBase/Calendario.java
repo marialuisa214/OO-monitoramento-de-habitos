@@ -1,7 +1,9 @@
 package classesBase;
 import java.util.Date;
 
-public class Calendario {
+//repensar essa classe - parece mais uma interface Gráfica(nenhum método)
+
+public class Calendario { 
 //ATRRIBUTOS
 	DiasSemana nome;
 	Date data;
@@ -15,6 +17,7 @@ public class Calendario {
 }
 
 //MÉTODOS
+	
 	
 	
 }

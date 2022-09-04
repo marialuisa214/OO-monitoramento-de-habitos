@@ -4,7 +4,12 @@ public class HabitoSemanal extends Habito {
 //ATRIBUTOS
 	private DiasSemana diaSelecionado;
 	
-// o que é necessário para a construção do hábito?(nome, dias da semana o resto é pré preparado)
+//CONSTRUTOR
+	HabitoSemanal (String nome, AreaDaVida areaRelacionada){
+		this.nome = nome;
+		this.areaRelacionada = areaRelacionada;
+		//inserir os dias tbm!!
+	}
 	
 //METODOS
 	public DiasSemana getDia(){

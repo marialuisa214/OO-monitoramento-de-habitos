@@ -9,8 +9,7 @@ public enum Turno {
 	Turno(int valor) {
 		this.valor = valor;
 	}
-//METODOS
-	
+//METODOS	
 	public void setValor(int valor){
 		this.valor = valor;
 	}

@@ -4,11 +4,11 @@ public class AreaDaVida {
 
 	//ATRIBUTOS
 		private String nome;
-		//private Habito habitoRelacionado;
+//		private Habito habitoRelacionado;
 		
 	//CONSTRUTOR
 		public AreaDaVida(String nome) {
-			this.nome = nome;		
+			this.nome = nome;
 		}
 
 	//METODOS
@@ -17,6 +17,6 @@ public class AreaDaVida {
 		public void setNome(String nome) {
 			this.nome = nome;}
 		
-		//CRIARNOVOHABITO
+	//CRIARNOVOHABITO
 }
 

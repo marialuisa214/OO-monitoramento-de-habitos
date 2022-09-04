@@ -3,6 +3,7 @@ package classesBase;
 public abstract class Habito {
 	//ATRIBUTOS
 		protected String nome;
+		protected AreaDaVida areaRelacionada;
 		protected int repeticaoDia = 1;
 		protected Turno turno = Turno.QUALQUER; 
 		protected int feito;
@@ -30,10 +31,9 @@ public abstract class Habito {
 			} if(feito > repeticaoDia) {
 				System.out.println("erro"); //não deve ser possivel realizar mais vezes que o indicado ao criar o hábito
 			} else {
-				System.out.println("para finalizar esse hábito faltam " + (repeticaoDia - feito) + " vezes");
+				System.out.println("para finalizar a tarfea é necessariorealizar o habito mais " + (repeticaoDia - feito) + " vez(es)");
 			}
 				}
-		
 		public Turno getTurno(){
 			return turno;}
 		public void setDefinindoTurno(Turno turno) {
@@ -42,6 +42,10 @@ public abstract class Habito {
 		public boolean getStatus() {
 			return status;}
 		public void setStatus(boolean status) {
-			this.status = status;}
+			this.status = status;
+			if (status == true) {
+				this.feito = repeticaoDia;
+			}
+		}
 
 }
