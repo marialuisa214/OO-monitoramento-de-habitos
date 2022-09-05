@@ -7,12 +7,12 @@ public class Usuario {
 		private String senha;
 
 	//CONSTRUTOR
-		public Usuario(String nome, String email, String senha) {
+	/*	public Usuario(String nome, String email, String senha) {
 			this.nome = nome;
 			this.email = email;
 			this.senha = senha;
 		}
-		
+	*/	
 //	METODOS
 		public String getNome() {
 			return nome;}
