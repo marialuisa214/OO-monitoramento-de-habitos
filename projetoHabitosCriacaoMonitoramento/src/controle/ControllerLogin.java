@@ -10,12 +10,10 @@ import view.Login;
 public class ControllerLogin {
 	
 	private List<Usuario> usuarios ;
-	private Login telaLogin ;
 	
 	
 	public ControllerLogin() {
 		this.usuarios = new ArrayList<Usuario>();
-		this.telaLogin = new Login();
 		this.usarioValido();
 	}
 	public void usarioValido() {
@@ -25,7 +23,7 @@ public class ControllerLogin {
 		usuario.setEmail("maria@ironmaiden.com");
 		this.usuarios.add(usuario);
 	}
-	private int buscaUsuarioPorNome(String nome) {
+	public int buscaUsuarioPorNome(String nome) {
 		for(int i=0; i<usuarios.size();i++) {
 			if(usuarios.get(i).getNome().equals(nome))
 			{
@@ -35,13 +33,16 @@ public class ControllerLogin {
 		return -1;
 	}
 	
+	public Usuario retornoUsuarioID(int id) {
+		return usuarios.get(id);
+	}
 	
 	@SuppressWarnings("deprecation")
-	private boolean validaLogin(int posicao) {
+	public boolean validaLogin(int posicao, String senha) {
 		if(posicao == -1) {
 			return false;
 		}
-		if(usuarios.get(posicao).getSenha().equals(telaLogin.getSenha().getText()))
+		if(usuarios.get(posicao).getSenha().equals(senha))
 		{
 			return true;
 		}
@@ -50,11 +51,5 @@ public class ControllerLogin {
 			return false;
 		}
 	}
-
-	public void loginBotaoActionPerformed(java.awt.event.ActionEvent evt) {                                           
-	    int index = this.buscaUsuarioPorNome(this.telaLogin.getNome().getText());  
-	    if(validaLogin(index)) {
-	    	JOptionPane.showMessageDialog(null,"Voce está autorizado");
-	    }
-    } 
+ 
 }
