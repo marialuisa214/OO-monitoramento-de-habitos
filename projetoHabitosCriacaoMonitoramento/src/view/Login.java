@@ -16,17 +16,20 @@ import controle.ControllerLogin;
 
 
 public class Login implements ActionListener {
-		private JFrame janela = new JFrame();
-		private JLabel nomeLabel = new JLabel("Nome:");
-		private JTextField nome = new JTextField(10);
+	//ATRIBUTOS
+	private JFrame janela = new JFrame();
+	private JLabel nomeLabel = new JLabel("Nome:");
+	private JTextField nome = new JTextField(10);
 		
-		private JLabel senhaLabel = new JLabel("Senha:");
-		private JTextField senha = new JPasswordField(10);
+	private JLabel senhaLabel = new JLabel("Senha:");
+	private JTextField senha = new JPasswordField(10);
 		
-		private static JButton botaoLogin = new JButton("Logar");
-		private ControllerLogin controle = new ControllerLogin();
+	private static JButton botaoLogin = new JButton("Logar");
+	private ControllerLogin controle = new ControllerLogin();
 		
+	//METODOS	
 	public void autenticar() {
+		System.out.println("rodei");
 		janela = new JFrame();
 		janela.setVisible(true);
 		
@@ -37,6 +40,7 @@ public class Login implements ActionListener {
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		
 		Object src = e.getSource();
 		if(src == botaoLogin) {
 			this.controle.usarioValido();
@@ -50,8 +54,9 @@ public class Login implements ActionListener {
 	}
 
 	public static void main(String[] args) {
-		Login janela = new Login();
-		botaoLogin.addActionListener(janela);
+		Login tela = new Login();
+		tela.autenticar();
+		botaoLogin.addActionListener(tela);
 	
 	}
 

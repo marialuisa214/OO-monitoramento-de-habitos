@@ -16,6 +16,7 @@ public class ControllerLogin {
 		this.usuarios = new ArrayList<Usuario>();
 		this.usarioValido();
 	}
+	
 	public void usarioValido() {
 		Usuario usuario = new Usuario();
 		usuario.setNome("Maria");
@@ -24,7 +25,7 @@ public class ControllerLogin {
 		this.usuarios.add(usuario);
 	}
 	public int buscaUsuarioPorNome(String nome) {
-		for(int i=0; i<usuarios.size();i++) {
+			for(int i=0; i<usuarios.size();i++) {
 			if(usuarios.get(i).getNome().equals(nome))
 			{
 				return i;
