@@ -1,15 +1,18 @@
 package classesBase;
 
 public class AreaDaVida {
-
+    
 	//ATRIBUTOS
 		private String nome;
+//                public Usuario usuario;
 //		private Habito habitoRelacionado;
+
+   
 		
-	//CONSTRUTOR
-		public AreaDaVida(String nome) {
-			this.nome = nome;
-		}
+//	CONSTRUTOR
+//		public AreaDaVida(String nome) {
+//			this.nome = nome;
+//		}
 
 	//METODOS
 		public String getNome() {
@@ -17,6 +20,12 @@ public class AreaDaVida {
 		public void setNome(String nome) {
 			this.nome = nome;}
 		
-	//CRIARNOVOHABITO
+//	 public Usuario getUsuario() {
+//         return usuario;
+//        }
+//
+//    public void setUsuario(Usuario usuario) {
+//        this.usuario = usuario;
+//    }
+    
 }
-

@@ -5,11 +5,11 @@ public class HabitoSemanal extends Habito {
 	private DiasSemana diaSelecionado;
 	
 //CONSTRUTOR
-	HabitoSemanal (String nome, AreaDaVida areaRelacionada){
-		this.nome = nome;
-		this.areaRelacionada = areaRelacionada;
-		//inserir os dias tbm!!
-	}
+//	HabitoSemanal (String nome, AreaDaVida areaRelacionada){
+//		this.nome = nome;
+//		this.areaRelacionada = areaRelacionada;
+//		//inserir os dias tbm!!
+//	}
 	
 //METODOS
 	public DiasSemana getDia(){

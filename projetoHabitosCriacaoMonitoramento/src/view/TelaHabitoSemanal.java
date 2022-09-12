@@ -1,19 +1,21 @@
 package view;
 
 import javax.swing.JOptionPane;
-import model.AreaDaVida;
-import model.HabitoSemanal;
-import model.Usuario;
+
+import classesBase.AreaDaVida;
+import classesBase.Turnos;
+import classesBase.Usuario;
 
 public class TelaHabitoSemanal extends javax.swing.JFrame {
-//    public AreaDaVida areaVida;
-    public HabitoSemanal habitoSemanal;
+    public AreaDaVida areaVida = new AreaDaVida();
+    public TelaHabitoSemanal habitoSemanal;
     public Usuario usuario = new Usuario();
+    public Turnos turno;
 
     public TelaHabitoSemanal() {
         initComponents();
 //        this.areaVida = new AreaDaVida();
-        this.habitoSemanal = new HabitoSemanal();
+//        this.habitoSemanal = new TelaHabitoSemanal();
 //        
     }
 
@@ -310,7 +312,7 @@ public class TelaHabitoSemanal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoCriarHabitoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCriarHabitoActionPerformed
-        System.out.println(nomeHabito.getText());
+//        System.out.println(nomeHabito.getText());
 //        //area da vida selecionada
 //        if(radioAreaPessoal.isSelected() == true ){
 //            habitoSemanal.areaVida.setNome("Crescimento Pessoal");
@@ -321,23 +323,23 @@ public class TelaHabitoSemanal extends javax.swing.JFrame {
 //        }if(radioAreaFinanceiro.isSelected()){
 //            habitoSemanal.areaVida.setNome("Vida Financeira");
 //        }
-//        
-        if(radioQualquer.isSelected() == true ){
-            habitoSemanal.turno.setValor(1);
-        } if (radioManha.isSelected()){
-            habitoSemanal.turno.setValor(2);
-        }if(radioTarde.isSelected()){
-            habitoSemanal.turno.setValor(3);
-        }if(radioNoite.isSelected()){
-            habitoSemanal.turno.setValor(4);
-        }
+        
+//        if(radioQualquer.isSelected() == true ){
+//            habitoSemanal.setDefinindoTurno(turno(1));
+//        } if (radioManha.isSelected()){
+//            habitoSemanal.setDefinindoTurno(turno(2));
+//        }if(radioTarde.isSelected()){
+//            habitoSemanal.setDefinindoTurno(3);
+//        }if(radioNoite.isSelected()){
+//            habitoSemanal.turno.setDefinindoTurno(4);
+//        }
 
-//        //Nome que o Hábito recebe
-        if(nomeHabito.getText() == ""){ //ERROR!
-            JOptionPane.showMessageDialog(null, "Você esqueceu de preencher todos os campos!");
-        }else{        
-        habitoSemanal.setNome(nomeHabito.getText());
-        }
+        //Nome que o Hábito recebe
+//        if(nomeHabito.getText() == ""){ //ERROR!
+//            JOptionPane.showMessageDialog(null, "Você esqueceu de preencher todos os campos!");
+//        }else{        
+//        habitoSemanal.setNome(nomeHabito.getText());
+//        }
         
         //criar uma lista que  coleta todos os radio marcados 
 //        habitoSemanal.
@@ -427,11 +429,23 @@ public class TelaHabitoSemanal extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaHabitoSemanal().setVisible(true);
+//                new TelaHabitoSemanal().setVisible(true);
             }
         });
     }

@@ -1,4 +1,7 @@
 package view;
+
+import view.TelaHabitoDatado;
+
 public class HabitoSelecao extends javax.swing.JFrame {
 
     public static TelaHabitoDatado telaDatado = new TelaHabitoDatado();

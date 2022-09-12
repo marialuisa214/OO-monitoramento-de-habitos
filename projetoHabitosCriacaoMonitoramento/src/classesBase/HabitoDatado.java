@@ -1,8 +1,9 @@
+
 package classesBase;
 
 import java.util.Calendar;
 
-public class HabitoDatado {
+public class HabitoDatado extends Habito {
 //ATRIBUTOS
 	int dataFixa;
 	Calendar c = Calendar.getInstance();
@@ -12,6 +13,9 @@ public class HabitoDatado {
 		//ex: "correr.setData(c.get(Calendar.YEAR));"
 
 //CONSTRUTOR
+        public HabitoDatado(String nome, AreaDaVida areaRelacionada){
+		this.nome = nome;
+		this.areaRelacionada = areaRelacionada;}
 
 //METODOS
 	public int getData() {

@@ -2,7 +2,8 @@ package dao;
 
 import java.util.ArrayList;
 import java.util.List;
-import model.Usuario;
+
+import classesBase.Usuario;
 
 public class BancoUsuarios {
     private List<Usuario> usuarios;

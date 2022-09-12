@@ -1,51 +1,31 @@
 package classesBase;
 
 public abstract class Habito {
-	//ATRIBUTOS
-		protected String nome;
-		protected AreaDaVida areaRelacionada;
-		protected int repeticaoDia = 1;
-		protected Turno turno = Turno.QUALQUER; 
-		protected int feito;
-		protected boolean status;
-		protected Lembrete lembrete;
-
-	//METODOS
-		public String getNome() {
-			return nome;}
-		public void setNome(String nome) {
-			this.nome = nome;}
+//ATRIBUTOS
+    protected String nome;
+    protected AreaDaVida areaRelacionada;
+    public Turnos turno; 
+    protected boolean status;
+                
+//METODOS
+    public String getNome() {
+        return nome;}
+    public void setNome(String nome) {
+        this.nome = nome;}
+			
+    public Turnos getTurno(){
+        return turno;}
+    public void setDefinindoTurno(Turnos turno) {
+        this.turno = turno;}
 		
-		public int getRepeticaoDia() {
-			return repeticaoDia;}
-		public void setRepeticaoDia(int repeticoes) {
-			this.repeticaoDia = repeticoes;}
-		
-		public int getFeito() {
-			return feito;}
-		public void setFeito(int feito) {
-			this.feito = feito;
-			if(feito==repeticaoDia) {
-				System.out.println("tarefa completa!");
-				this.status = true;
-			} if(feito > repeticaoDia) {
-				System.out.println("erro"); //não deve ser possivel realizar mais vezes que o indicado ao criar o hábito
-			} else {
-				System.out.println("para finalizar a tarfea é necessariorealizar o habito mais " + (repeticaoDia - feito) + " vez(es)");
-			}
-				}
-		public Turno getTurno(){
-			return turno;}
-		public void setDefinindoTurno(Turno turno) {
-			this.turno = turno;}
-		
-		public boolean getStatus() {
-			return status;}
-		public void setStatus(boolean status) {
-			this.status = status;
-			if (status == true) {
-				this.feito = repeticaoDia;
-			}
-		}
-
+    public boolean getStatus() {
+        return status;}
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+    
+    public AreaDaVida getAreaRelacionada() {
+        return areaRelacionada;}
+    public void setAreaRelacionada(AreaDaVida areaRelacionada) {
+        this.areaRelacionada = areaRelacionada;}
 }

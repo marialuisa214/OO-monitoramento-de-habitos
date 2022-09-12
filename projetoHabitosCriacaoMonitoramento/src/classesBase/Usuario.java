@@ -1,11 +1,38 @@
 package classesBase;
 
-public class Usuario {
-	//ATRIBUTOS
-		private String nome;
-		private String email;
-		private String senha;
+import java.util.ArrayList;
+import java.util.List;
 
+public class Usuario {
+//ATRIBUTOS
+	private String nome;
+	private String email;
+	private String senha;
+        public AreaDaVida area;
+        private List<HabitoSemanal> habitosSemanais = new ArrayList<HabitoSemanal>();
+//                
+//        public List<HabitoSemanal> getHabitosSemanais() {
+//            return habitosSemanais;
+//        }
+//        public void setUsuarios(List<HabitoSemanal> habitosSemanais) {
+//        this.habitosSemanais = habitosSemanais;
+//        }
+//        
+//        public void criarHabito(HabitoSemanal habitoSemanal){
+//        habitosSemanais.add(habitoSemanal);
+//    }
+//                
+
+    public List<HabitoSemanal> getHabitosSemanais() {
+        return habitosSemanais;
+    }
+
+    public void setHabitosSemanais(List<HabitoSemanal> habitosSemanais) {
+        this.habitosSemanais = habitosSemanais;
+    }
+
+         
+                
 	//CONSTRUTOR
 	/*	public Usuario(String nome, String email, String senha) {
 			this.nome = nome;
@@ -37,5 +64,22 @@ public class Usuario {
 				return true;
 			}else {
 				return false;}
-		}
+                }
+
+//
+//                public AreaDaVida getArea() {
+//                    return area;
+//                }
+//
+//                public void setArea(AreaDaVida area) {
+//                    this.area = area;
+//                }
+		
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "nome=" + nome + ", email=" + email + ", senha=" + senha + '}';
+    }
+         
 }
+
